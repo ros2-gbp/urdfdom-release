@@ -1,7 +1,7 @@
-From b37dab3f91e98b68894b07d876ed1a44db947e54 Mon Sep 17 00:00:00 2001
+From b39f633fe6f8283788a19690d80fd207816f3ed7 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Steven!=20Ragnar=C3=B6k?= <steven@nuclearsandwich.com>
 Date: Tue, 13 Jun 2017 15:14:43 -0400
-Subject: [PATCH 2/2] Attempt to pass gnuinstalldirs multiarch path to
+Subject: [PATCH 2/3] Attempt to pass gnuinstalldirs multiarch path to
  dh_shlibdeps.
 
 ---
