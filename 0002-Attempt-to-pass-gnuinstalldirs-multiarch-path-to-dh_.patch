@@ -1,4 +1,4 @@
-From b39f633fe6f8283788a19690d80fd207816f3ed7 Mon Sep 17 00:00:00 2001
+From df5f435367b43e3ea0ef76eb60e9c0f33892a3b0 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Steven!=20Ragnar=C3=B6k?= <steven@nuclearsandwich.com>
 Date: Tue, 13 Jun 2017 15:14:43 -0400
 Subject: [PATCH 2/3] Attempt to pass gnuinstalldirs multiarch path to

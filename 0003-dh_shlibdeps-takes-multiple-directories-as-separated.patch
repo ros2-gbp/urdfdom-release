@@ -1,4 +1,4 @@
-From 5414b6b77c62079629c92e171fb12c9413fa02c0 Mon Sep 17 00:00:00 2001
+From 54a7ad91390d33e418f4eff2fdd1c094b60a3437 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Steven!=20Ragnar=C3=B6k?= <steven@nuclearsandwich.com>
 Date: Thu, 15 Jun 2017 16:08:07 -0400
 Subject: [PATCH 3/3] dh_shlibdeps takes multiple directories as : separated.
