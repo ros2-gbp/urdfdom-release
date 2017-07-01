@@ -1,7 +1,7 @@
-From df5f435367b43e3ea0ef76eb60e9c0f33892a3b0 Mon Sep 17 00:00:00 2001
+From e44ecf1061ff06c816752fde2cb341b21a3f7ee9 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Steven!=20Ragnar=C3=B6k?= <steven@nuclearsandwich.com>
 Date: Tue, 13 Jun 2017 15:14:43 -0400
-Subject: [PATCH 2/3] Attempt to pass gnuinstalldirs multiarch path to
+Subject: [PATCH 2/4] Attempt to pass gnuinstalldirs multiarch path to
  dh_shlibdeps.
 
 ---
@@ -9,10 +9,10 @@ Subject: [PATCH 2/3] Attempt to pass gnuinstalldirs multiarch path to
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/debian/rules.em b/debian/rules.em
-index 254c5c8..27231cc 100755
+index 8ef84e5..12b0780 100755
 --- a/debian/rules.em
 +++ b/debian/rules.em
-@@ -48,7 +48,7 @@ override_dh_shlibdeps:
+@@ -53,7 +53,7 @@ override_dh_shlibdeps:
  	# in the install tree that was dropped by catkin, and source it.  It will
  	# set things like CMAKE_PREFIX_PATH, PKG_CONFIG_PATH, and PYTHONPATH.
  	if [ -f "@(InstallationPrefix)/setup.sh" ]; then . "@(InstallationPrefix)/setup.sh"; fi && \

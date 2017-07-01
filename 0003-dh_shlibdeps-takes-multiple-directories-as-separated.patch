@@ -1,7 +1,7 @@
-From 54a7ad91390d33e418f4eff2fdd1c094b60a3437 Mon Sep 17 00:00:00 2001
+From e46f7dc1ed9b3f11e97f534387451a04492ca21f Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Steven!=20Ragnar=C3=B6k?= <steven@nuclearsandwich.com>
 Date: Thu, 15 Jun 2017 16:08:07 -0400
-Subject: [PATCH 3/3] dh_shlibdeps takes multiple directories as : separated.
+Subject: [PATCH 3/4] dh_shlibdeps takes multiple directories as : separated.
 
 As opposed to the program it wraps, dpkg-shlibdeps which takes multiple
 -l arguments.
@@ -12,10 +12,10 @@ Why does it do it differently? I dunno?
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/debian/rules.em b/debian/rules.em
-index 27231cc..f12b680 100755
+index 12b0780..41e8f53 100755
 --- a/debian/rules.em
 +++ b/debian/rules.em
-@@ -48,7 +48,7 @@ override_dh_shlibdeps:
+@@ -53,7 +53,7 @@ override_dh_shlibdeps:
  	# in the install tree that was dropped by catkin, and source it.  It will
  	# set things like CMAKE_PREFIX_PATH, PKG_CONFIG_PATH, and PYTHONPATH.
  	if [ -f "@(InstallationPrefix)/setup.sh" ]; then . "@(InstallationPrefix)/setup.sh"; fi && \
