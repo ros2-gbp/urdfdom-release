@@ -1,0 +1,12 @@
+Source: ros-ardent-urdfdom
+Section: misc
+Priority: extra
+Maintainer: John Hsu <hsu@osrfoundation.org>
+Build-Depends: debhelper (>= 9.0.0), libtinyxml-dev, ros-ardent-console-bridge, ros-ardent-tinyxml-vendor, ros-ardent-urdfdom-headers (>= 0.2.3), ros-ardent-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-ardent-urdfdom
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libtinyxml-dev, ros-ardent-console-bridge, ros-ardent-tinyxml-vendor, ros-ardent-urdfdom-headers (>= 0.2.3), ros-ardent-ros-workspace
+Description: A library to access URDFs using the DOM model.
