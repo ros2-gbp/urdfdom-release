@@ -1,3 +1,26 @@
+## urdfdom (dashing) - 2.2.0-1
+
+The packages in the `urdfdom` repository were released into the `dashing` distro by running `/usr/bin/bloom-release -n -r dashing urdfdom --override-release-repository-push-url git@github.com:ros2-gbp/urdfdom-release` on `Sun, 14 Apr 2019 14:29:24 -0000`
+
+The `urdfdom` package was released.
+
+Version of package(s) in repository `urdfdom`:
+
+- upstream repository: https://github.com/ros2/urdfdom.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `2.2.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.8.0`
+- catkin_pkg version: `0.4.11`
+- rosdep version: `0.15.1`
+- rosdistro version: `0.7.3`
+- vcstools version: `0.1.40`
+
+
 ## urdfdom (crystal) - 2.1.0-0
 
 The packages in the `urdfdom` repository were released into the `crystal` distro by running `/usr/bin/bloom-release -n -r crystal urdfdom --override-release-repository-push-url git@github.com:ros2-gbp/urdfdom-release` on `Mon, 19 Nov 2018 21:52:19 -0000`
