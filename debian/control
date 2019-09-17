@@ -1,0 +1,12 @@
+Source: ros-eloquent-urdfdom
+Section: misc
+Priority: extra
+Maintainer: Steven! Ragnarök <steven@osrfoundation.org>
+Build-Depends: debhelper (>= 9.0.0), cmake, libconsole-bridge-dev, libtinyxml-dev, ros-eloquent-console-bridge-vendor, ros-eloquent-tinyxml-vendor, ros-eloquent-urdfdom-headers (>= 0.2.3), ros-eloquent-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-eloquent-urdfdom
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libconsole-bridge-dev, libtinyxml-dev, ros-eloquent-console-bridge-vendor, ros-eloquent-tinyxml-vendor, ros-eloquent-urdfdom-headers (>= 0.2.3), ros-eloquent-ros-workspace
+Description: A library to access URDFs using the DOM model.
