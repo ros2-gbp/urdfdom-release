@@ -1,0 +1,12 @@
+Source: ros-rolling-urdfdom
+Section: misc
+Priority: optional
+Maintainer: Steven! Ragnarök <steven@osrfoundation.org>
+Build-Depends: debhelper (>= 9.0.0), cmake, libconsole-bridge-dev, libtinyxml-dev, ros-rolling-console-bridge-vendor, ros-rolling-tinyxml-vendor, ros-rolling-urdfdom-headers (>= 0.2.3), ros-rolling-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-rolling-urdfdom
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libconsole-bridge-dev, libtinyxml-dev, ros-rolling-console-bridge-vendor, ros-rolling-tinyxml-vendor, ros-rolling-urdfdom-headers (>= 0.2.3), ros-rolling-ros-workspace
+Description: A library to access URDFs using the DOM model.
