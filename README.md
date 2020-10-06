@@ -1,3 +1,26 @@
+## urdfdom (foxy) - 2.3.3-1
+
+The packages in the `urdfdom` repository were released into the `foxy` distro by running `/usr/bin/bloom-release --track foxy --rosdistro foxy urdfdom` on `Tue, 06 Oct 2020 12:57:34 -0000`
+
+The `urdfdom` package was released.
+
+Version of package(s) in repository `urdfdom`:
+
+- upstream repository: https://github.com/ros2/urdfdom.git
+- release repository: https://github.com/ros2-gbp/urdfdom-release.git
+- rosdistro version: `2.3.2-1`
+- old version: `2.3.2-1`
+- new version: `2.3.3-1`
+
+Versions of tools used:
+
+- bloom version: `0.10.0`
+- catkin_pkg version: `0.4.23`
+- rosdep version: `0.19.0`
+- rosdistro version: `0.8.3`
+- vcstools version: `0.1.42`
+
+
 ## urdfdom (rolling) - 2.3.3-1
 
 The packages in the `urdfdom` repository were released into the `rolling` distro by running `/usr/bin/bloom-release --track rolling --rosdistro rolling urdfdom` on `Mon, 05 Oct 2020 18:56:08 -0000`
