@@ -218,5 +218,5 @@ tracks:
     release_tag: :{version}
     ros_distro: rolling
     vcs_type: git
-    vcs_uri: https://github.com/ros2/urdfdom.git
+    vcs_uri: https://github.com/ros/urdfdom.git
     version: :{auto}
