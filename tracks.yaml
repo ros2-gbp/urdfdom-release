@@ -144,7 +144,7 @@ tracks:
     release_tag: :{version}
     ros_distro: foxy
     vcs_type: git
-    vcs_uri: https://github.com/ros2/urdfdom.git
+    vcs_uri: https://github.com/ros/urdfdom.git
     version: :{auto}
   r2b2:
     actions:
