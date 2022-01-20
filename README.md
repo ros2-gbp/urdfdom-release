@@ -1,3 +1,26 @@
+## urdfdom (rolling) - 3.0.1-1
+
+The packages in the `urdfdom` repository were released into the `rolling` distro by running `/usr/bin/bloom-release -r rolling urdfdom` on `Thu, 20 Jan 2022 20:09:21 -0000`
+
+The `urdfdom` package was released.
+
+Version of package(s) in repository `urdfdom`:
+
+- upstream repository: https://github.com/ros/urdfdom.git
+- release repository: https://github.com/ros2-gbp/urdfdom-release.git
+- rosdistro version: `2.3.5-1`
+- old version: `2.3.5-1`
+- new version: `3.0.1-1`
+
+Versions of tools used:
+
+- bloom version: `0.10.7`
+- catkin_pkg version: `0.4.24`
+- rosdep version: `0.21.0`
+- rosdistro version: `0.8.3`
+- vcstools version: `0.1.42`
+
+
 ## urdfdom (galactic) - 2.3.5-1
 
 The packages in the `urdfdom` repository were released into the `galactic` distro by running `/usr/bin/bloom-release --track galactic --rosdistro galactic urdfdom` on `Tue, 27 Apr 2021 14:12:08 -0000`
