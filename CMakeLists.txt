@@ -1,7 +1,7 @@
 cmake_minimum_required( VERSION 3.5 FATAL_ERROR )
 project (urdfdom CXX C)
 
-set (URDF_MAJOR_VERSION 1)
+set (URDF_MAJOR_VERSION 3)
 set (URDF_MINOR_VERSION 0)
 set (URDF_PATCH_VERSION 0)
 
@@ -24,6 +24,10 @@ if (HAS_VISIBILITY)
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fvisibility=hidden")
 endif()
 
+if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+  add_compile_options(-Wall -Wextra -Wpedantic)
+endif()
+
 # This shouldn't be necessary, but there has been trouble
 # with MSVC being set off, but MSVCXX ON.
 if(MSVC OR MSVC90 OR MSVC10)
@@ -32,29 +36,19 @@ endif (MSVC OR MSVC90 OR MSVC10)
 
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
-find_package(tinyxml_vendor REQUIRED)
-find_package(TinyXML REQUIRED)
-
+find_package(tinyxml_vendor QUIET)
+find_package(TinyXML)
+# bionic has not cmake module, workaround
+if (NOT TinyXML_FOUND AND UNIX)
+  include(FindPkgConfig)
+  pkg_check_modules (TinyXML tinyxml)
+else()
+  # Make it fail in platforms without pkgconfig
+  find_package(TinyXML REQUIRED) # bionic has not cmake module
+endif()
 find_package(urdfdom_headers 1.0 REQUIRED)
-
-# Default to C++14
-if(NOT CMAKE_CXX_STANDARD)
-  set(CMAKE_CXX_STANDARD 14)
-endif()
-if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-  add_compile_options(-Wall -Wextra -Wpedantic)
-endif()
-
-find_package(console_bridge_vendor REQUIRED) # Provides console_bridge 0.4.0 on platforms without it.
+find_package(console_bridge_vendor QUIET) # Provides console_bridge 0.4.0 on platforms without it.
 find_package(console_bridge REQUIRED)
-
-#In Visual Studio a special postfix for 
-#libraries compiled in debug is used
-if(MSVC)
-set(CMAKE_DEBUG_POSTFIX "d")
-# Export symbols on Windows by default
-add_definitions(-DURDFDOM_EXPORTS)
-endif(MSVC)
 
 # Control where libraries and executables are placed during the build
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/${CMAKE_INSTALL_BINDIR}")
@@ -93,6 +87,15 @@ if (NOT MSVC)
   install(FILES ${CMAKE_BINARY_DIR}/${pkg_conf_file}
     DESTINATION ${CMAKE_INSTALL_LIBDIR}/pkgconfig/ COMPONENT pkgconfig)
 endif()
+
+
+# Add uninstall target
+# Ref: http://www.cmake.org/Wiki/CMake_FAQ#Can_I_do_.22make_uninstall.22_with_CMake.3F
+configure_file(
+  "${PROJECT_SOURCE_DIR}/cmake/uninstall.cmake.in"
+  "${PROJECT_BINARY_DIR}/uninstall.cmake" IMMEDIATE @ONLY)
+add_custom_target(uninstall
+  "${CMAKE_COMMAND}" -P "${PROJECT_BINARY_DIR}/uninstall.cmake")
 
 message(STATUS "Configuration successful. Type make to compile urdfdom")
 
