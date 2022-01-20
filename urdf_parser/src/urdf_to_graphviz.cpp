@@ -85,9 +85,23 @@ void printTree(LinkConstSharedPtr link, string file)
 
 int main(int argc, char** argv)
 {
-  if (argc != 2){
-    std::cerr << "Usage: urdf_to_graphiz input.xml" << std::endl;
+  std::string executable_name(argv[0]);
+  std::string deprecated_name("urdf_to_graphiz");
+  if (deprecated_name == executable_name.substr(executable_name.size() - deprecated_name.size())) {
+    std::cerr << "WARNING: The executable named '" << deprecated_name
+              << "' is deprecated. Use 'urdf_to_graphviz' instead." << std::endl;
+  }
+  if (argc < 2 || argc > 3) {
+    std::cerr << "Usage: urdf_to_graphviz input.xml [OUTPUT]"
+              << "  Will create either $ROBOT_NAME.gv & $ROBOT_NAME.pdf in CWD"
+              << "  or OUTPUT.gv & OUTPUT.pdf." << std::endl;
     return -1;
+  }
+  if (argc != 3) {
+    std::cerr << "WARNING: OUTPUT not given. This type of usage is deprecated!"
+              << "Usage: urdf_to_graphviz input.xml [OUTPUT]"
+              << "  Will create either $ROBOT_NAME.gv & $ROBOT_NAME.pdf in CWD"
+              << "  or OUTPUT.gv & OUTPUT.pdf." << std::endl;
   }
 
   // get the entire file
@@ -106,7 +120,10 @@ int main(int argc, char** argv)
     std::cerr << "ERROR: Model Parsing the xml failed" << std::endl;
     return -1;
   }
+
   string output = robot->getName();
+  if (argc == 3)
+    output = argv[2];
 
   // print entire tree to file
   printTree(robot->getRoot(), output+".gv");
