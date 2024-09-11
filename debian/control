@@ -1,0 +1,12 @@
+Source: ros-jazzy-urdfdom
+Section: misc
+Priority: optional
+Maintainer: Chris Lalancette <clalancette@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), cmake, libconsole-bridge-dev, libtinyxml2-dev, python3-dev <!nocheck>, ros-jazzy-console-bridge-vendor, ros-jazzy-tinyxml2-vendor, ros-jazzy-urdfdom-headers (>= 0.2.3), ros-jazzy-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-jazzy-urdfdom
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libconsole-bridge-dev, libtinyxml2-dev, ros-jazzy-console-bridge-vendor, ros-jazzy-tinyxml2-vendor, ros-jazzy-urdfdom-headers (>= 0.2.3), ros-jazzy-ros-workspace
+Description: A library to access URDFs using the DOM model.
