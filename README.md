@@ -1,3 +1,26 @@
+## urdfdom (kilted) - 4.0.1-1
+
+The packages in the `urdfdom` repository were released into the `kilted` distro by running `/home/cottsay/infra_ws/install/bloom/bin/bloom-release urdfdom -r kilted` on `Mon, 12 May 2025 22:54:39 -0000`
+
+The `urdfdom` package was released.
+
+Version of package(s) in repository `urdfdom`:
+
+- upstream repository: https://github.com/ros/urdfdom.git
+- release repository: https://github.com/ros2-gbp/urdfdom-release.git
+- rosdistro version: `4.0.0-3`
+- old version: `4.0.0-3`
+- new version: `4.0.1-1`
+
+Versions of tools used:
+
+- bloom version: `0.12.0`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.25.1`
+- rosdistro version: `1.0.1`
+- vcstools version: `0.1.42`
+
+
 ## urdfdom (jazzy) - 4.0.1-1
 
 The packages in the `urdfdom` repository were released into the `jazzy` distro by running `/usr/bin/bloom-release --track jazzy --rosdistro jazzy urdfdom` on `Wed, 11 Sep 2024 22:02:50 -0000`
