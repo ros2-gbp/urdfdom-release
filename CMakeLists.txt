@@ -1,9 +1,9 @@
 cmake_minimum_required( VERSION 3.5 FATAL_ERROR )
 project (urdfdom CXX C)
 
-set (URDF_MAJOR_VERSION 4)
+set (URDF_MAJOR_VERSION 5)
 set (URDF_MINOR_VERSION 0)
-set (URDF_PATCH_VERSION 0)
+set (URDF_PATCH_VERSION 1)
 
 set (URDF_VERSION ${URDF_MAJOR_VERSION}.${URDF_MINOR_VERSION}.${URDF_PATCH_VERSION})
 set (URDF_MAJOR_MINOR_VERSION ${URDF_MAJOR_VERSION}.${URDF_MINOR_VERSION})
@@ -66,7 +66,7 @@ string(REGEX REPLACE "[^/]+" ".." RELATIVE_PATH_LIBDIR_TO_PREFIX "${CMAKE_INSTAL
 add_subdirectory(urdf_parser)
 
 set(PKG_NAME ${PROJECT_NAME})
-set(PKG_LIBRARIES urdfdom_sensor urdfdom_model_state urdfdom_model urdfdom_world)
+set(PKG_LIBRARIES urdfdom_sensor urdfdom_model urdfdom_world)
 set(PKG_DEPENDS urdfdom_headers)
 set(PKG_EXPORTS urdfdom)
 set(cmake_conf_file "cmake/urdfdom-config")
@@ -91,7 +91,7 @@ install(FILES package.xml DESTINATION share/${PROJECT_NAME})
 # Make the package config file
 set(PKG_DESC "Unified Robot Description Format")
 set(PKG_DEPENDS "urdfdom_headers") # make the list separated by spaces instead of ;
-set(PKG_URDF_LIBS "-lurdfdom_sensor -lurdfdom_model_state -lurdfdom_model -lurdfdom_world")
+set(PKG_URDF_LIBS "-lurdfdom_sensor -lurdfdom_model -lurdfdom_world")
 set(pkg_conf_file "cmake/pkgconfig/urdfdom.pc")
 configure_file("${CMAKE_CURRENT_SOURCE_DIR}/${pkg_conf_file}.in" "${CMAKE_BINARY_DIR}/${pkg_conf_file}" @ONLY)
 install(FILES ${CMAKE_BINARY_DIR}/${pkg_conf_file}
