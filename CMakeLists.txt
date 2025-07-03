@@ -3,7 +3,7 @@ project (urdfdom CXX C)
 
 set (URDF_MAJOR_VERSION 5)
 set (URDF_MINOR_VERSION 0)
-set (URDF_PATCH_VERSION 1)
+set (URDF_PATCH_VERSION 2)
 
 set (URDF_VERSION ${URDF_MAJOR_VERSION}.${URDF_MINOR_VERSION}.${URDF_PATCH_VERSION})
 set (URDF_MAJOR_MINOR_VERSION ${URDF_MAJOR_VERSION}.${URDF_MINOR_VERSION})
@@ -48,7 +48,7 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 find_package(tinyxml2_vendor QUIET)
 find_package(TinyXML2 REQUIRED)
 
-find_package(urdfdom_headers 1.0 REQUIRED)
+find_package(urdfdom_headers REQUIRED)
 find_package(console_bridge_vendor QUIET) # Provides console_bridge 0.4.0 on platforms without it.
 find_package(console_bridge REQUIRED)
 
