@@ -1,0 +1,25 @@
+ros-rolling-urdfdom (5.0.2-1noble) noble; urgency=high
+
+  * Relax the version compatibility for urdfdom_headers. (#222 <https://github.com/ros/urdfdom/issues/222>)
+  * Contributors: Chris Lalancette
+
+ -- Chris Lalancette <clalancette@openrobotics.org>  Thu, 03 Jul 2025 00:00:00 -0000
+
+ros-rolling-urdfdom (5.0.1-1noble) noble; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@openrobotics.org>  Tue, 01 Jul 2025 00:00:00 -0000
+
+ros-rolling-urdfdom (4.0.3-1noble) noble; urgency=high
+
+  * Removed deprecated code (#217 <https://github.com/ros/urdfdom/issues/217>)
+  * Remove ROS 1 workflows and update ROS 2 (#218 <https://github.com/ros/urdfdom/issues/218>)
+  * Improvements for the URDF xsd specification  (#200 <https://github.com/ros/urdfdom/issues/200>)
+  * Update ros2.yaml (#214 <https://github.com/ros/urdfdom/issues/214>)
+  * fix: missing header (#216 <https://github.com/ros/urdfdom/issues/216>)
+  * Contributors: Alejandro Hernández Cordero, Amin Ya, Pierre Ballif, mosfet80
+
+ -- Chris Lalancette <clalancette@openrobotics.org>  Mon, 23 Jun 2025 00:00:00 -0000
+
+
