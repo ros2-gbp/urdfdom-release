@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <!--
 
-   XML Schema for URDF v1.0
+   XML Schema for URDF v1.1
 
    This is a proposal XML Schema to validate the original URDF file
    format. It supports PR2 extensions (transmission) but not the
@@ -9,6 +9,7 @@
 
   -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	   version="1.1"
 	   elementFormDefault="unqualified">
 
   <!-- data type definitions -->
@@ -97,6 +98,12 @@
     <xs:attribute name="scale" type="xs:string" default="1 1 1" />
   </xs:complexType>
 
+  <!-- capsule node type -->
+  <xs:complexType name="capsule">
+    <xs:attribute name="radius" type="xs:double" use="required" />
+    <xs:attribute name="length" type="xs:double" use="required" />
+  </xs:complexType>
+
   <!-- geometry node type -->
   <xs:complexType name="geometry">
     <xs:choice>
@@ -104,6 +111,7 @@
       <xs:element name="cylinder" type="cylinder" />
       <xs:element name="sphere" type="sphere" />
       <xs:element name="mesh" type="mesh" />
+      <xs:element name="capsule" type="capsule" />
     </xs:choice>
   </xs:complexType>
 
