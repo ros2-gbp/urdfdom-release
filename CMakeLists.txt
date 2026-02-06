@@ -1,11 +1,15 @@
-cmake_minimum_required( VERSION 3.5 FATAL_ERROR )
-project (urdfdom CXX C)
-
-set (URDF_MAJOR_VERSION 5)
-set (URDF_MINOR_VERSION 0)
-set (URDF_PATCH_VERSION 2)
+cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
+# Read version from package.xml
+file(READ package.xml PACKAGE_XML_DATA)
+string(REGEX MATCH "<version>([0-9]+)\.([0-9]+)\.([0-9]+)</version>" _ ${PACKAGE_XML_DATA})
+set(URDF_MAJOR_VERSION ${CMAKE_MATCH_1})
+set(URDF_MINOR_VERSION ${CMAKE_MATCH_2})
+set(URDF_PATCH_VERSION ${CMAKE_MATCH_3})
 
 set (URDF_VERSION ${URDF_MAJOR_VERSION}.${URDF_MINOR_VERSION}.${URDF_PATCH_VERSION})
+project (urdfdom VERSION ${URDF_VERSION}
+                 LANGUAGES CXX C)
+
 set (URDF_MAJOR_MINOR_VERSION ${URDF_MAJOR_VERSION}.${URDF_MINOR_VERSION})
 
 message (STATUS "${PROJECT_NAME} version ${URDF_VERSION}")
@@ -47,7 +51,7 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
 find_package(TinyXML2 REQUIRED)
 
-find_package(urdfdom_headers REQUIRED)
+find_package(urdfdom_headers 2.1.0 REQUIRED)
 find_package(console_bridge_vendor QUIET) # Provides console_bridge 0.4.0 on platforms without it.
 find_package(console_bridge REQUIRED)
 

@@ -94,9 +94,35 @@ public:
     }
   }
 
+  explicit URDFVersion(uint32_t major, uint32_t minor)
+    : major_(major), minor_(minor)
+  {}
+
   bool equal(uint32_t maj, uint32_t min)
   {
     return this->major_ == maj && this->minor_ == min;
+  }
+
+  // equivalent to greater or equal >=
+  bool at_least(uint32_t maj, uint32_t min) const
+  {
+    return this->major_ > maj || (this->major_ == maj && this->minor_ >= min);
+  }
+
+  // equivalent to lesser or equal <=
+  bool at_most(uint32_t maj, uint32_t min) const
+  {
+    return this->major_ < maj || (this->major_ == maj && this->minor_ <= min);
+  }
+
+  bool greater_than(uint32_t maj, uint32_t min) const
+  {
+    return this->major_ > maj || (this->major_ == maj && this->minor_ > min);
+  }
+
+  bool less_than(uint32_t maj, uint32_t min) const
+  {
+    return this->major_ < maj || (this->major_ == maj && this->minor_ < min);
   }
 
   uint32_t getMajor() const
