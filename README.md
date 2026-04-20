@@ -1,3 +1,26 @@
+## urdfdom (rolling) - 6.0.0-1
+
+The packages in the `urdfdom` repository were released into the `rolling` distro by running `/usr/local/google/home/scpeters/ws/venv_bloom/bin/bloom-release --rosdistro rolling urdfdom` on `Mon, 20 Apr 2026 22:39:50 -0000`
+
+The `urdfdom` package was released.
+
+Version of package(s) in repository `urdfdom`:
+
+- upstream repository: https://github.com/ros/urdfdom.git
+- release repository: https://github.com/ros2-gbp/urdfdom-release.git
+- rosdistro version: `5.1.1-1`
+- old version: `5.1.1-1`
+- new version: `6.0.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.13.0`
+- catkin_pkg version: `1.1.0`
+- rosdep version: `0.26.0`
+- rosdistro version: `1.0.1`
+- vcstools version: `0.1.42`
+
+
 ## urdfdom (rolling) - 5.1.1-1
 
 The packages in the `urdfdom` repository were released into the `rolling` distro by running `/usr/local/google/home/sloretz/projects/lyrical/env3/bin/bloom-release urdfdom --rosdistro rolling --track rolling` on `Wed, 15 Apr 2026 01:46:38 -0000`
