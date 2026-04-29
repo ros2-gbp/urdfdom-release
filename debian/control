@@ -1,0 +1,12 @@
+Source: ros-lyrical-urdfdom
+Section: misc
+Priority: optional
+Maintainer: Chris Lalancette <clalancette@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), cmake, libconsole-bridge-dev, libtinyxml2-dev, python3-dev <!nocheck>, ros-lyrical-console-bridge-vendor, ros-lyrical-urdfdom-headers (>= 0.2.3), ros-lyrical-ros-workspace
+Homepage: https://index.ros.org/p/urdfdom/#lyrical
+Standards-Version: 3.9.2
+
+Package: ros-lyrical-urdfdom
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libconsole-bridge-dev, libtinyxml2-dev, ros-lyrical-console-bridge-vendor, ros-lyrical-urdfdom-headers (>= 0.2.3), ros-lyrical-ros-workspace
+Description: A library to access URDFs using the DOM model.
