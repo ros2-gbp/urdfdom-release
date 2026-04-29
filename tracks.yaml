@@ -351,5 +351,4 @@ tracks:
     ros_distro: rolling
     vcs_type: git
     vcs_uri: https://github.com/ros/urdfdom.git
-    version: 6.0.0
-    version_saved: :{auto}
+    version: :{auto}
